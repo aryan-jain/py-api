@@ -10,7 +10,14 @@ class HealthData(BaseModel):
     uptime: int = Field(description="Uptime in seconds")
 
 
-class APIResponse(BaseModel):
+class HealthResponse(BaseModel):
     status: int = Field(description="Status code")
-    message: Optional[str] = Field(default=None, description="Message")
-    data: Optional[HealthData] = Field(default=None, description="Data")
+    data: HealthData = Field(default=None, description="Data")
+
+
+class ImageQuery(BaseModel):
+    text: str = Field(description="Text describing image")
+
+
+class ImageResponse(BaseModel):
+    text: str = Field(description="Text describing image")
