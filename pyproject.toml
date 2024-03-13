@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "py-api"
+version = "0.1.0"
+description = "A template to build REST APIs in Python using FastAPI"
+authors = ["aryan-jain <technicallyaryan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+uvicorn = {extras = ["standard"], version = "^0.28.0"}
+fastapi = "^0.110.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
